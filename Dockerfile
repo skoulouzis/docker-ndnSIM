@@ -7,7 +7,7 @@ RUN apt-get update &&  apt-get upgrade -y && apt-get install -y python-dev pytho
 
 RUN apt-get install -y wget tar g++ git 
 RUN apt-get install -y build-essential libsqlite3-dev libcrypto++-dev libboost-all-dev pkg-config
-RUN apt-get install -y openssl
+RUN apt-get install -y openssl libssl-dev
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
