@@ -2,11 +2,12 @@ FROM ubuntu:14.04
 
 # ADD sources.list /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -y python-dev python-pygraphviz python-kiwi \
+RUN apt-get update &&  apt-get upgrade -y && apt-get install -y python-dev python-pygraphviz python-kiwi \
     python-pygoocanvas python-gnome2 python-rsvg
 
-RUN apt-get install -y wget tar g++ git
+RUN apt-get install -y wget tar g++ git 
 RUN apt-get install -y build-essential libsqlite3-dev libcrypto++-dev libboost-all-dev pkg-config
+RUN apt-get install -y openssl
 
 # Replace 1000 with your user / group id
 RUN export uid=1000 gid=1000 && \
